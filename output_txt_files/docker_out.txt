@@ -1,1 +1,32 @@
-<paste log output from Docker prediction, here>
+Removing intermediate container 00d5c9d34d1d
+ ---> 166e2de9988d
+Step 5/6 : EXPOSE 80
+ ---> Running in 402c3858e5bf
+Removing intermediate container 402c3858e5bf
+ ---> 4146d184ba2b
+Step 6/6 : CMD ["python", "app.py"]
+ ---> Running in 1f77a814059c
+Removing intermediate container 1f77a814059c
+ ---> 5d0a1979175e
+Successfully built 5d0a1979175e
+Successfully tagged microk8s:latest
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 159-583-323
+[2022-12-26 11:58:48,390] INFO in app: JSON payload: 
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2022-12-26 11:58:48,405] INFO in app: Inference payload DataFrame: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2022-12-26 11:58:48,417] INFO in app: Scaling Payload: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2022-12-26 11:58:48,426] INFO in app: Output prediction: [20.35373177134412]
+172.17.0.1 - - [26/Dec/2022 11:58:48] "POST /predict HTTP/1.1" 200 -

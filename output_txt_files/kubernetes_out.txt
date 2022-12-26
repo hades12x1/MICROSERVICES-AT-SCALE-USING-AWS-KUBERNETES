@@ -1,1 +1,24 @@
-<paste log output from Kubernetes-mediated prediction, here>
+ubuntu@ip-172-31-15-191:~/project-ml-microservice-kubernetes$ minikube start
+😄  minikube v1.28.0 on Ubuntu 18.04
+✨  Using the docker driver based on existing profile
+
+🧯  The requested memory allocation of 1945MiB does not leave room for system overhead (total system memory: 1945MiB). You may face stability issues.
+💡  Suggestion: Start minikube with less memory allocated: 'minikube start --memory=1945mb'
+
+👍  Starting control plane node minikube in cluster minikube
+🚜  Pulling base image ...
+🔄  Restarting existing docker container for "minikube" ...
+🐳  Preparing Kubernetes v1.25.3 on Docker 20.10.20 ...
+🔎  Verifying Kubernetes components...
+❗  Executing "docker container inspect minikube --format={{.State.Status}}" took an unusually long time: 3.412077396s
+💡  Restarting the docker service may improve performance.
+    ▪ Using image gcr.io/k8s-minikube/storage-provisioner:v5
+🌟  Enabled addons: storage-provisioner, default-storageclass
+🏄  Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
+ubuntu@ip-172-31-15-191:~/project-ml-microservice-kubernetes$ sh run_kubernetes.sh 
+Error from server (AlreadyExists): pods "microk8s" already exists
+NAME       READY   STATUS    RESTARTS      AGE
+microk8s   1/1     Running   1 (48m ago)   51m
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
