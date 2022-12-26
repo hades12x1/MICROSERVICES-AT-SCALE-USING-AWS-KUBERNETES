@@ -1,4 +1,4 @@
-<include a CircleCI status badge, here>
+[![kcemenike](https://circleci.com/gh/hades12x1/microservices-at-scale-using-aws-kubernetes.svg?style=svg)](https://app.circleci.com/pipelines/github/hades12x1/microservices-at-scale-using-aws-kubernetes)
 
 ## Project Overview
 
